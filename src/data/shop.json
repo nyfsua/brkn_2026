@@ -1,0 +1,404 @@
+[
+    {
+      "slug": "giran-deck",
+      "name": "Giran Deck",
+      "price": "₦100,000",
+      "description": "They don't know thou art Giran and that's why they test you. This one is street-inspired. The camo design is a 10. What else can we say? Come skate like you own the streets.",
+      "images": [ "giran.png", "gripside.png" ],
+      "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+
+      "sections": [
+        { "title": "Product Details", "content": "Gritty street inspired Skateboard Deck with Camo design." },
+
+        { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+
+        { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+
+      ]
+    },
+
+    {
+      "slug": "fs-shirt",
+      "name": "FS Shirt",
+      "price": "₦20,000",
+      "description": "This one is a must-have for every skater. Designed to work with any bottoms. ",
+      "images": [ "fs.png", "white-back.png" ],
+      "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+
+      "sections": [
+        { "title": "Product Details", "content": "Wizkid." },
+
+        { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+
+        { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+
+      ]
+  },
+
+    {
+        "slug": "itutu-deck",
+        "name": "Itutu Deck",
+        "price": "₦FS",
+        "description": "Wizkid FC, tap in!! Limited to only members of Wizkid FC. If you nor be FC, abeg dey go front. This one is not available for public sale unfortunately. Tell Wizkid to come and buy.",
+        "images": [ "itutu.png", "gripside.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Wizkid." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+    },
+
+    {
+        "slug": "stand",
+        "name": "Skateboard Stand",
+        "price": "₦5,000",
+        "description": "Display your skateboard in style with our Skateboard Stand. Perfect for showcasing your favorite deck when not in use.",
+
+        "images": [ "skateboard-stand.png", "stand-visualiser.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Wizkid." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+    },
+
+    {
+        "slug": "gxng-deck",
+        "name": "Gxng Deck",
+        "price": "₦100,000",
+        "description": "Community.",
+        "images": [ "gxng.png", "gripside.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Community." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "kerosene-socks",
+        "name": "Kerosene Socks",
+        "price": "₦10,000",
+        "description": "Community.",
+        "images": [ "kerosene-socks.png", "kerosene-socks.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Community." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "000-shirt",
+        "name": "000 Shirt",
+        "price": "₦20,000",
+        "description": "000 000 000",
+        "images": [ "000-front.png", "000.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Wizkid." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+    },
+
+    {
+        "slug": "000-deck",
+        "name": "000 Deck",
+        "price": "₦150,000",
+        "description": "000 000 000",
+        "images": [ "crash-poetics.png", "gripside.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Wizkid." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+    },
+
+    {
+        "slug": "crash poetics",
+        "name": "Crash Poetics Pack",
+        "price": "₦250,000",
+        "description": "000 000 000",
+        "images": [ "crashpoetics-pack.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Wizkid." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+    },
+
+      {
+        "slug": "irony-socks",
+        "name": "Irony Socks",
+        "price": "₦10,000",
+        "description": "Community.",
+        "images": [ "irony-white.png", "irony-white.png" ],
+        "delivery": { "from": "2025-05-29", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Community." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "sticker-pack",
+        "name": "Sticker Pack",
+        "price": "₦5,000",
+        "description": "Community.",
+        "images": [ "stickers.png", "stickers-sans.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Community." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "wura-deck",
+        "name": "Wura Deck",
+        "price": "₦100,000",
+        "description": "Gold.",
+        "images": [ "wura.png", "gripside.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Gold." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "generis-wheel",
+        "name": "Generis Wheel",
+        "price": "₦10,000",
+        "description": "Gold.",
+        "images": [ "wheel.png", "wheel.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Gold." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "titanium-truck",
+        "name": "Titanium Truck x2",
+        "price": "₦85,000",
+        "description": "Gold.",
+        "images": [ "titanium.png", "titanium.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Gold." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+
+      {
+        "slug": "legacy-deck",
+        "name": "Legacy Deck",
+        "price": "₦100,000",
+        "description": "Gritty street inspired Skateboard Deck with Camo design.",
+        "images": [ "legacy.png", "gripside.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Gritty street inspired Skateboard Deck with Camo design." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "opal-deck",
+        "name": "Opal Deck",
+        "price": "₦100,000",
+        "description": "Gritty street inspired Skateboard Deck with Camo design.",
+        "images": [ "opal.png", "gripside.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Gritty street inspired Skateboard Deck with Camo design." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "kerosene-windbreaker",
+        "name": "Kerosene Windbreaker",
+        "price": "₦100,000",
+        "description": "Polyester Windbreaker. Designed for the West African climate.",
+        "images": [ "kerosene-front.png", "kerosene-back.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Community." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "kerosene-shirt",
+        "name": "Kerosene Shirt",
+        "price": "₦20,000",
+        "description": "Polyester Windbreaker. Designed for the West African climate.",
+        "images": [ "kerosene-shirt.png", "KERO-SHIRT-BACK.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Community." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "maelstrom-deck",
+        "name": "Maelstrom Deck",
+        "price": "₦100,000",
+        "description": "Designed by Leah Okprima for BrknBrds.",
+        "images": [ "maelstrom.png", "gripside.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Designed by Leah Okprima for BrknBrds." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "felt-bag",
+        "name": "Skatedeck Felt Bag",
+        "price": "₦5,000",
+        "description": "Designed by Leah Okprima for BrknBrds.",
+        "images": [ "felt-bag.png", "felt-back.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Designed by Leah Okprima for BrknBrds." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "kerosene-deck",
+        "name": "Kerosene Deck",
+        "price": "₦150,000",
+        "description": "tkrds",
+        "images": [ "kerosene-deck.png", "gripside.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Designed by Leah Okprima for BrknBrds." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+      },
+
+      {
+        "slug": "kerosene-bandana",
+        "name": "Kerosene Bandana",
+        "price": "₦5,000",
+        "description": "Display your skateboard in style with our Skateboard Stand. Perfect for showcasing your favorite deck when not in use.",
+
+        "images": [ "kerosene-bandana.png", "kerosene-bandana.png" ],
+        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
+  
+        "sections": [
+          { "title": "Product Details", "content": "Wizkid." },
+  
+          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
+  
+          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
+  
+        ]
+    }
+    
+    
+
+  ]
+  

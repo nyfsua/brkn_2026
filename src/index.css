@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "ABC Diatype Mono";
+  src: url("./assets/fonts/DiatypeMono-Medium.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+
+  background: #151515;
+  color: #d9d9d9;
+
+  font-family: "ABC Diatype Mono", monospace;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  letter-spacing: -0.045em;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+::selection {
+  background: #C81103;
+  color: white;
+} 
+
+.archive-scroll {
+  animation: archive-scroll 80s linear infinite;
+}
+
+.archive-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes archive-scroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-33.333%);
+  }
+}
