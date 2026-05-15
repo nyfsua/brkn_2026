@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import flat from "../assets/svg/logo-flat.svg";
 import tiffinagh from "../assets/svg/logo-tiffinagh.svg";
@@ -10,8 +11,20 @@ import youtubeLogo from "../assets/svg/youtube.svg";
 import twitterLogo from "../assets/svg/twitter.svg";
 
 export default function HomePage() {
+  const [menuOpen, setMenuOpen] =
+    useState(false);
+
   return (
-    <main className="relative h-screen w-screen overflow-hidden bg-[#151515] text-[#C6C6C8]">
+    <main
+      className="
+        relative
+        h-screen
+        w-screen
+        overflow-hidden
+        bg-[#151515]
+        text-[#C6C6C8]
+      "
+    >
       {/* grain */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.025] mix-blend-screen">
         <div
@@ -25,19 +38,55 @@ export default function HomePage() {
       </div>
 
       {/* top left */}
-      <div className="absolute left-7 top-6 z-20 flex flex-col text-[12px] uppercase leading-[1.05] tracking-[-0.08em] text-[#C6C6C8]">
-        <span>BRKNBRDS — LAGOS</span>
-        <span>SKATEBOARDS, DEPENDABLE HARDWARE</span>
-        <span>2026</span>
+      <div
+        className="
+          absolute
+          left-4
+          top-4
+          z-30
+          flex
+          flex-col
+          text-[10px]
+          uppercase
+          leading-[1.05]
+          tracking-[-0.08em]
+          md:left-7
+          md:top-6
+          md:text-[12px]
+        "
+      >
+        <span>BRKNBRDS - LAGOS</span>
+
+        <span className="text-[#8E8E92]">
+          SKATEBOARDS, DEPENDABLE HARDWARE
+        </span>
+
+        <span className="text-[#8E8E92]">
+          2026
+        </span>
       </div>
 
-      {/* top nav */}
-      <nav className="absolute right-7 top-6 z-20 flex items-center gap-12 text-[12px] uppercase tracking-[-0.08em]">
+      {/* desktop nav */}
+      <nav
+        className="
+          absolute
+          right-7
+          top-6
+          z-30
+          hidden
+          items-center
+          gap-12
+          text-[12px]
+          uppercase
+          tracking-[-0.08em]
+          md:flex
+        "
+      >
         <a
           href="https://90642.org/"
           target="_blank"
           rel="noreferrer"
-          className="text-[#C6C6C8] transition-colors duration-200 hover:text-[#C81103]"
+          className="transition-colors duration-200 hover:text-[#C81103]"
         >
           LAB
         </a>
@@ -46,169 +95,396 @@ export default function HomePage() {
           href="https://instagram.com/brknbrds_"
           target="_blank"
           rel="noreferrer"
-          className="text-[#C6C6C8] transition-colors duration-200 hover:text-[#C81103]"
+          className="transition-colors duration-200 hover:text-[#C81103]"
         >
           INSTAGRAM
         </a>
 
-        {/* icon cluster */}
         <div className="flex items-center gap-8">
           <a
-            href="https://open.spotify.com/user/31j2pzm5e5fjdcti5mdvuunsxgs4"
+            href="https://open.spotify.com/"
             target="_blank"
             rel="noreferrer"
-            className="group"
           >
             <img
               src={spotifyLogo}
-              alt="Spotify"
-              className="
-                h-[18px]
-                w-auto
-                transition-all
-                duration-200
-                group-hover:[filter:brightness(0)_saturate(100%)_invert(16%)_sepia(92%)_saturate(6225%)_hue-rotate(4deg)_brightness(93%)_contrast(98%)]
-              "
+              alt=""
+              className="h-[18px]"
             />
           </a>
 
           <a
-            href="https://www.youtube.com/@brknbrds"
+            href="https://youtube.com/"
             target="_blank"
             rel="noreferrer"
-            className="group"
           >
             <img
               src={youtubeLogo}
-              alt="YouTube"
-              className="
-                h-[18px]
-                w-auto
-                transition-all
-                duration-200
-                group-hover:[filter:brightness(0)_saturate(100%)_invert(16%)_sepia(92%)_saturate(6225%)_hue-rotate(4deg)_brightness(93%)_contrast(98%)]
-              "
+              alt=""
+              className="h-[18px]"
             />
           </a>
 
           <a
-            href="https://x.com/brknbrds"
+            href="https://x.com/"
             target="_blank"
             rel="noreferrer"
-            className="group"
           >
             <img
               src={twitterLogo}
-              alt="X"
-              className="
-                h-[16px]
-                w-auto
-                transition-all
-                duration-200
-                group-hover:[filter:brightness(0)_saturate(100%)_invert(16%)_sepia(92%)_saturate(6225%)_hue-rotate(4deg)_brightness(93%)_contrast(98%)]
-              "
+              alt=""
+              className="h-[16px]"
             />
           </a>
         </div>
 
         <Link
           to="/sessions"
-          className="text-[#C6C6C8] transition-colors duration-200 hover:text-[#C81103]"
+          className="transition-colors duration-200 hover:text-[#C81103]"
         >
           SESSIONS
         </Link>
 
         <Link
           to="/shop"
-          className="text-[#C6C6C8] transition-colors duration-200 hover:text-[#C81103]"
+          className="transition-colors duration-200 hover:text-[#C81103]"
         >
           SHOP
         </Link>
       </nav>
 
+      {/* mobile menu trigger */}
+      <button
+        onClick={() =>
+          setMenuOpen(!menuOpen)
+        }
+        className="
+          absolute
+          right-4
+          top-4
+          z-40
+          text-[10px]
+          uppercase
+          tracking-[-0.08em]
+          md:hidden
+        "
+      >
+        {menuOpen ? "CLOSE" : "MENU"}
+      </button>
+
+      {/* mobile overlay */}
+      <motion.div
+        initial={false}
+        animate={{
+          opacity: menuOpen ? 1 : 0,
+          pointerEvents: menuOpen
+            ? "auto"
+            : "none",
+        }}
+        transition={{ duration: 0.2 }}
+        className="
+          absolute
+          inset-0
+          z-20
+          flex
+          flex-col
+          justify-center
+          bg-[#151515]
+          px-5
+          md:hidden
+        "
+      >
+        <div
+          className="
+            flex
+    flex-col
+    items-center
+    text-center
+    gap-5
+    text-[12px]
+    uppercase
+    tracking-[-0.08em]
+          "
+        >
+          <Link
+            to="/shop"
+            onClick={() =>
+              setMenuOpen(false)
+            }
+          >
+            SHOP
+          </Link>
+
+          <Link
+            to="/sessions"
+            onClick={() =>
+              setMenuOpen(false)
+            }
+          >
+            SESSIONS
+          </Link>
+
+          <a
+            href="https://www.instagram.com/brknbrds_"
+            target="_blank"
+            rel="noreferrer"
+            onClick={() =>
+              setMenuOpen(false)
+            }
+          >
+            INSTAGRAM
+          </a>
+
+          <a
+            href="https://90642.org/"
+            target="_blank"
+            rel="noreferrer"
+            onClick={() =>
+              setMenuOpen(false)
+            }
+            className="text-[#C6C6C8]"
+          >
+            LAB
+          </a>
+
+          <div className="mt-2 flex items-center justify-center gap-12">
+          <a
+            href="https://open.spotify.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={spotifyLogo}
+              alt=""
+              className="h-[18px]"
+            />
+          </a>
+
+          <a
+            href="https://youtube.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={youtubeLogo}
+              alt=""
+              className="h-[18px]"
+            />
+          </a>
+
+          <a
+            href="https://x.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={twitterLogo}
+              alt=""
+              className="h-[16px]"
+            />
+          </a>
+        </div>
+
+          
+        </div>
+      </motion.div>
+
       {/* center */}
-      <section className="flex h-full flex-col items-center justify-center">
+      <section
+        className="
+          flex
+          h-full
+          flex-col
+          items-center
+          justify-center
+          px-5
+          text-center
+        "
+      >
         <motion.img
           src={tiffinagh}
           alt=""
-          className="mb-24 w-[118px]"
+          className="
+            mb-12
+            w-[78px]
+            md:mb-24
+            md:w-[118px]
+          "
         />
 
         <motion.img
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9 }}
+          initial={{
+            opacity: 0,
+            scale: 0.98,
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.9,
+          }}
           src={flat}
           alt="Brknbrds"
-          className="w-[420px]"
+          className="
+            w-[240px]
+            md:w-[420px]
+          "
         />
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.15, duration: 1 }}
+          transition={{
+            delay: 0.15,
+            duration: 1,
+          }}
           className="
-            mt-7
-            max-w-[720px]
+            mt-6
+            max-w-[340px]
             text-center
-            text-[12px]
+            text-[10px]
             uppercase
-            leading-[0.95]
-            tracking-[-0.08em]
-            text-[#C6C6C8]
+            leading-[1.05]
+            tracking-[-0.04em]
+            md:mt-7
+            md:max-w-[720px]
+            md:text-[12px]
+            md:leading-[0.95]
+            md:tracking-[-0.08em]
           "
         >
-          IF YOU’RE LOOKING FOR SAFE, FOCUS-GROUPED SKATE PRODUCTS,
-          YOU’RE IN THE WRONG PLACE. THIS SITE CONTAINS ABNORMALLY
-          HIGH LEVELS OF GREVAIL, MUSTION, AND COURSISTENCE.
+          IF YOU’RE LOOKING FOR SAFE,
+          FOCUS-GROUPED SKATE PRODUCTS,
+          YOU’RE IN THE WRONG PLACE. 
+          THIS SITE CONTAINS ABNORMALLY HIGH 
+          LEVELS OF GREVAIL, MUSTION, AND COURSISTENCE.
         </motion.p>
 
         <motion.img
           src={asterisk}
           alt=""
-          className="mt-28 w-[100px]"
+          className="
+            mt-14
+            w-[62px]
+            md:mt-28
+            md:w-[100px]
+          "
         />
       </section>
 
-      {/* bottom nav */}
-      <footer className="absolute bottom-16 left-1/2 z-20 flex -translate-x-1/2 items-center gap-9 text-[12px] uppercase tracking-[-0.08em]">
+      {/* desktop footer */}
+      <footer
+        className="
+          absolute
+          bottom-16
+          left-1/2
+          z-20
+          hidden
+          -translate-x-1/2
+          items-center
+          gap-9
+          text-[12px]
+          uppercase
+          tracking-[-0.08em]
+          md:flex
+        "
+      >
         <a
-          href="https://www.instagram.com/ceonpotato/"
+          href="https://instagram.com/"
           target="_blank"
           rel="noreferrer"
-          className="text-[#C6C6C8] transition-colors duration-200 hover:text-[#C81103]"
+          className="transition-colors duration-200 hover:text-[#C81103]"
         >
           POTATO
         </a>
 
         <a
-          href="https://www.instagram.com/brknbrds_/"
+          href="https://instagram.com/"
           target="_blank"
           rel="noreferrer"
-          className="text-[#C6C6C8] transition-colors duration-200 hover:text-[#C81103]"
+          className="transition-colors duration-200 hover:text-[#C81103]"
         >
           BANJI
         </a>
 
         <a
-          href="https://www.instagram.com/otahix_/"
+          href="https://instagram.com/"
           target="_blank"
           rel="noreferrer"
-          className="text-[#C6C6C8] transition-colors duration-200 hover:text-[#C81103]"
+          className="transition-colors duration-200 hover:text-[#C81103]"
         >
           GREG
         </a>
 
         <Link
           to="/archive"
-          className="text-[#C6C6C8] transition-colors duration-200 hover:text-[#C81103]"
+          className="transition-colors duration-200 hover:text-[#C81103]"
         >
           ARCHIVE
         </Link>
 
         <Link
           to="/dry-stuff"
-          className="text-[#C81103] transition-colors duration-200 hover:text-[#C6C6C8]"
+          className="text-[#C81103]"
+        >
+          DRY STUFF
+        </Link>
+      </footer>
+
+      {/* mobile footer */}
+      <footer
+        className="
+          absolute
+          bottom-8
+          left-1/2
+          z-20
+          flex
+          -translate-x-1/2
+          flexrow
+          items-center
+          gap-6
+          text-[9px]
+          uppercase
+          tracking-[-0.08em]
+          md:hidden
+        "
+      >
+
+        <a
+          href="https://instagram.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="transition-colors duration-200 hover:text-[#C81103]"
+        >
+          POTATO
+        </a>
+
+        <a
+          href="https://instagram.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="transition-colors duration-200 hover:text-[#C81103]"
+        >
+          BANJI
+        </a>
+
+        <a
+          href="https://instagram.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="transition-colors duration-200 hover:text-[#C81103]"
+        >
+          GREG
+        </a>
+
+        <Link to="/archive">
+          ARCHIVE
+        </Link>
+
+        <Link
+          to="/dry-stuff"
+          className="whitespace-nowrap text-[#C81103]"
         >
           DRY STUFF
         </Link>

@@ -47,20 +47,68 @@ img {
   color: white;
 } 
 
-.archive-scroll {
-  animation: archive-scroll 80s linear infinite;
+/* -------------------------------- */
+/* responsive primitives */
+/* -------------------------------- */
+
+:root {
+  --edge-gap: 34px;
+  --mobile-edge-gap: 16px;
 }
 
-.archive-scroll:hover {
-  animation-play-state: paused;
+/* -------------------------------- */
+/* mobile optimizations */
+/* -------------------------------- */
+
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
-@keyframes archive-scroll {
-  0% {
-    transform: translateY(0);
+body {
+  overflow-x: hidden;
+  touch-action: manipulation;
+}
+
+/* smoother taps */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------------------------------- */
+/* typography scaling */
+/* -------------------------------- */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 11px;
   }
 
-  100% {
-    transform: translateY(-33.333%);
+  body {
+    letter-spacing: -0.035em;
+  }
+}
+
+/* -------------------------------- */
+/* utility helpers */
+/* -------------------------------- */
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
   }
 }

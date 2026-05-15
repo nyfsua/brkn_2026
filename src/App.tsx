@@ -12,16 +12,30 @@ import DryStuffPage from "./pages/DryStuffPage";
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/shop" element={<ShopPage />} />
-      <Route path="/sessions" element={<SessionsPage />} />
-      <Route path="/archive" element={<ArchivePage />} />
-      <Route path="/dry-stuff" element={<DryStuffPage />} />
+      <Route
+        path="/"
+        element={<HomePage />}
+      />
 
       <Route
-  path="/shop/:slug"
-  element={<ShopPage />}
-/>
+        path="/shop"
+        element={<ShopPage />}
+      />
+
+      <Route
+        path="/sessions"
+        element={<SessionsPage />}
+      />
+
+      <Route
+        path="/archive"
+        element={<ArchivePage />}
+      />
+
+      <Route
+        path="/dry-stuff"
+        element={<DryStuffPage />}
+      />
     </Routes>
   );
 }

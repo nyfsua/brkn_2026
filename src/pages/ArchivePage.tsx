@@ -8,7 +8,7 @@ import tiffinagh from "../assets/svg/logo-tiffinagh.svg";
 */
 
 const archiveImages = import.meta.glob(
-  "../assets/archive/*.{jpg,jpeg,png,JPG,JPEG,PNG,webp,WEBP}",
+  "../assets/archive/converted/*.{webp,WEBP}",
   {
     eager: true,
     import: "default",
@@ -65,7 +65,7 @@ export default function ArchivePage() {
       <section
         className="
           mx-auto
-          columns-3
+          columns-1 md:columns-3
           gap-6
           space-y-6
           max-w-[1280px]
@@ -73,7 +73,7 @@ export default function ArchivePage() {
         "
       >
         {archiveItems.map((image, index) => (
-          <button
+          <div
             key={`${image}-${index}`}
             className="
               group
@@ -147,7 +147,7 @@ export default function ArchivePage() {
   SEE MORE
 </a>
             </div>
-          </button>
+          </div>
         ))}
       </section>
     </main>
