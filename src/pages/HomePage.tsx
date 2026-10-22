@@ -3,7 +3,7 @@ import { SessionImage, ProductImage, ProductCard, SectionLabel } from "../compon
 import { productHref } from "../data/products";
 import shopItems from "../data/shop.json";
 import { sessions, sessionId, locationTitle } from "../data/sessions";
-import landingLandscape from "../assets/landing/442AD580-AB62-4058-BA32-0D8A26691379_1_201_a.jpeg";
+import { landingImage } from "../data/pageMetadata";
 import landingPortrait from "../assets/landing/4DC23CC6-B8E1-4A65-AD1E-19C9CD1FB9E2_1_201_a.jpeg";
 import footerImage from "../assets/footer/53AB5413-F580-430B-ADA8-BEC08E08DB15_1_105_c.jpeg";
 
@@ -26,7 +26,7 @@ export default function HomePage() {
     <main id="main-content" className="home-page">
       <picture className="home-hero">
         <source media="(max-width: 767px)" srcSet={landingPortrait} width={2401} height={3361} />
-        <img src={landingLandscape} alt="A skateboarder on a concrete ramp, photographed in black and white." width={2401} height={1335} fetchPriority="high" decoding="async" />
+        <img src={landingImage.path} alt={landingImage.alt} width={landingImage.width} height={landingImage.height} fetchPriority="high" decoding="async" />
       </picture>
       <section className="home-masthead light-section" aria-labelledby="home-title">
         <div className="home-masthead__title"><h1 id="home-title">Brknbrds</h1></div>

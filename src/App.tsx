@@ -8,22 +8,17 @@ import SessionsPage from "./pages/SessionsPage";
 import ArchivePage from "./pages/ArchivePage";
 import DryStuffPage from "./pages/DryStuffPage";
 import ProductPage from "./pages/ProductPage";
-import shopItems from "./data/shop.json";
+import { getMetadataTags, getPageMetadata } from "./data/pageMetadata";
 
 function PageMetadata() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
-    const product = shopItems.find((item) => `/shop/${encodeURIComponent(item.slug)}` === pathname);
-    const pages: Record<string, [string, string]> = {
-      "/": ["Brknbrds — Lagos", "Skateboards, dependable hardware. Sessions, products and the Brknbrds archive."],
-      "/shop": ["Shop — Brknbrds", `Skateboards, dependable hardware. Explore all ${shopItems.length} Brknbrds products.`],
-      "/sessions": ["Sessions — Brknbrds", "Open sessions, film runs, test nights, bad ideas, good terrain. Field log / public runs."],
-      "/archive": ["Archive — Brknbrds", "The Brknbrds archive. Lagos."],
-      "/dry-stuff": ["Dry Stuff — Brknbrds", "Brknbrds legal division. Terms, liability and materials."],
-    };
-    const [title, description] = product ? [`${product.name} — Brknbrds`, product.description] : (pages[pathname] ?? ["Page not found — Brknbrds", "Brknbrds — Lagos."]);
+    const { title, url } = getPageMetadata(pathname);
     document.title = title;
-    for (const [selector, value] of [["meta[name='description']", description], ["meta[property='og:title']", title], ["meta[property='og:description']", description]]) document.querySelector(selector)?.setAttribute("content", value);
+    document.querySelector("link[rel='canonical']")?.setAttribute("href", url);
+    for (const { attribute, key, content } of getMetadataTags(pathname)) {
+      document.querySelector(`meta[${attribute}='${key}']`)?.setAttribute("content", content);
+    }
     if (hash) document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView();
     else window.scrollTo(0, 0);
   }, [pathname, hash]);
