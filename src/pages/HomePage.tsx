@@ -1,494 +1,76 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { SessionImage, ProductImage, ProductCard, SectionLabel } from "../components/Editorial";
+import { productHref } from "../data/products";
+import shopItems from "../data/shop.json";
+import { sessions, sessionId, locationTitle } from "../data/sessions";
+import landingLandscape from "../assets/landing/442AD580-AB62-4058-BA32-0D8A26691379_1_201_a.jpeg";
+import landingPortrait from "../assets/landing/4DC23CC6-B8E1-4A65-AD1E-19C9CD1FB9E2_1_201_a.jpeg";
+import footerImage from "../assets/footer/53AB5413-F580-430B-ADA8-BEC08E08DB15_1_105_c.jpeg";
 
-import flat from "../assets/svg/logo-flat.svg";
-import tiffinagh from "../assets/svg/logo-tiffinagh.svg";
-import asterisk from "../assets/svg/logo-asterisk.svg";
-
-import spotifyLogo from "../assets/svg/spotify.svg";
-import youtubeLogo from "../assets/svg/youtube.svg";
-import twitterLogo from "../assets/svg/twitter.svg";
+const starring = [
+  { name: "Potato", href: "https://www.instagram.com/ceonpotato/" },
+  { name: "Greg", href: "https://www.instagram.com/otahix_/" },
+  { name: "Banji", href: "https://www.instagram.com/brknbrds_/" },
+  { name: "Ziri", href: "https://www.instagram.com/alienboyziri/" },
+  { name: "Oseni", href: "https://www.instagram.com/tunde_oseniii/" },
+  { name: "Gbemi", href: "https://www.instagram.com/mi.cocobaby/" },
+  { name: "Lanre", href: "https://www.instagram.com/unussual_lanre/" },
+];
 
 export default function HomePage() {
-  const [menuOpen, setMenuOpen] =
-    useState(false);
+  const giran = shopItems.find((item) => item.slug === "giran-deck")!;
+  const featured = ["fs-shirt", "maelstrom-deck", "kerosene-windbreaker", "titanium-truck"]
+    .map((slug) => shopItems.find((item) => item.slug === slug)!);
 
   return (
-    <main
-      className="
-        relative
-        h-screen
-        w-screen
-        overflow-hidden
-        bg-[#151515]
-        text-[#C6C6C8]
-      "
-    >
-      {/* grain */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.025] mix-blend-screen">
-        <div
-          className="h-full w-full"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle, white 0.4px, transparent 0.4px)",
-            backgroundSize: "5px 5px",
-          }}
-        />
-      </div>
-
-      {/* top left */}
-      <div
-        className="
-          absolute
-          left-4
-          top-4
-          z-30
-          flex
-          flex-col
-          text-[10px]
-          uppercase
-          leading-[1.05]
-          tracking-[-0.08em]
-          md:left-7
-          md:top-6
-          md:text-[12px]
-        "
-      >
-        <span>BRKNBRDS - LAGOS</span>
-
-        <span className="text-[#8E8E92]">
-          SKATEBOARDS, DEPENDABLE HARDWARE
-        </span>
-
-        <span className="text-[#8E8E92]">
-          2026
-        </span>
-      </div>
-
-      {/* desktop nav */}
-      <nav
-        className="
-          absolute
-          right-7
-          top-6
-          z-30
-          hidden
-          items-center
-          gap-12
-          text-[12px]
-          uppercase
-          tracking-[-0.08em]
-          md:flex
-        "
-      >
-        <a
-          href="https://90642.org/"
-          target="_blank"
-          rel="noreferrer"
-          className="transition-colors duration-200 hover:text-[#C81103]"
-        >
-          LAB
-        </a>
-
-        <a
-          href="https://instagram.com/brknbrds_"
-          target="_blank"
-          rel="noreferrer"
-          className="transition-colors duration-200 hover:text-[#C81103]"
-        >
-          INSTAGRAM
-        </a>
-
-        <div className="flex items-center gap-8">
-          <a
-            href="https://open.spotify.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={spotifyLogo}
-              alt=""
-              className="h-[18px]"
-            />
-          </a>
-
-          <a
-            href="https://youtube.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={youtubeLogo}
-              alt=""
-              className="h-[18px]"
-            />
-          </a>
-
-          <a
-            href="https://x.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={twitterLogo}
-              alt=""
-              className="h-[16px]"
-            />
-          </a>
-        </div>
-
-        <Link
-          to="/sessions"
-          className="transition-colors duration-200 hover:text-[#C81103]"
-        >
-          SESSIONS
-        </Link>
-
-        <Link
-          to="/shop"
-          className="transition-colors duration-200 hover:text-[#C81103]"
-        >
-          SHOP
-        </Link>
-      </nav>
-
-      {/* mobile menu trigger */}
-      <button
-        onClick={() =>
-          setMenuOpen(!menuOpen)
-        }
-        className="
-          absolute
-          right-4
-          top-4
-          z-40
-          text-[10px]
-          uppercase
-          tracking-[-0.08em]
-          md:hidden
-        "
-      >
-        {menuOpen ? "CLOSE" : "MENU"}
-      </button>
-
-      {/* mobile overlay */}
-      <motion.div
-        initial={false}
-        animate={{
-          opacity: menuOpen ? 1 : 0,
-          pointerEvents: menuOpen
-            ? "auto"
-            : "none",
-        }}
-        transition={{ duration: 0.2 }}
-        className="
-          absolute
-          inset-0
-          z-20
-          flex
-          flex-col
-          justify-center
-          bg-[#151515]
-          px-5
-          md:hidden
-        "
-      >
-        <div
-          className="
-            flex
-    flex-col
-    items-center
-    text-center
-    gap-5
-    text-[12px]
-    uppercase
-    tracking-[-0.08em]
-          "
-        >
-          <Link
-            to="/shop"
-            onClick={() =>
-              setMenuOpen(false)
-            }
-          >
-            SHOP
-          </Link>
-
-          <Link
-            to="/sessions"
-            onClick={() =>
-              setMenuOpen(false)
-            }
-          >
-            SESSIONS
-          </Link>
-
-          <a
-            href="https://www.instagram.com/brknbrds_"
-            target="_blank"
-            rel="noreferrer"
-            onClick={() =>
-              setMenuOpen(false)
-            }
-          >
-            INSTAGRAM
-          </a>
-
-          <a
-            href="https://90642.org/"
-            target="_blank"
-            rel="noreferrer"
-            onClick={() =>
-              setMenuOpen(false)
-            }
-            className="text-[#C6C6C8]"
-          >
-            LAB
-          </a>
-
-          <div className="mt-2 flex items-center justify-center gap-12">
-          <a
-            href="https://open.spotify.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={spotifyLogo}
-              alt=""
-              className="h-[18px]"
-            />
-          </a>
-
-          <a
-            href="https://youtube.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={youtubeLogo}
-              alt=""
-              className="h-[18px]"
-            />
-          </a>
-
-          <a
-            href="https://x.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={twitterLogo}
-              alt=""
-              className="h-[16px]"
-            />
-          </a>
-        </div>
-
-          
-        </div>
-      </motion.div>
-
-      {/* center */}
-      <section
-        className="
-          flex
-          h-full
-          flex-col
-          items-center
-          justify-center
-          px-5
-          text-center
-        "
-      >
-        <motion.img
-          src={tiffinagh}
-          alt=""
-          className="
-            mb-12
-            w-[78px]
-            md:mb-24
-            md:w-[118px]
-          "
-        />
-
-        <motion.img
-          initial={{
-            opacity: 0,
-            scale: 0.98,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.9,
-          }}
-          src={flat}
-          alt="Brknbrds"
-          className="
-            w-[240px]
-            md:w-[420px]
-          "
-        />
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            delay: 0.15,
-            duration: 1,
-          }}
-          className="
-            mt-6
-            max-w-[340px]
-            text-center
-            text-[10px]
-            uppercase
-            leading-[1.05]
-            tracking-[-0.04em]
-            md:mt-7
-            md:max-w-[720px]
-            md:text-[12px]
-            md:leading-[0.95]
-            md:tracking-[-0.08em]
-          "
-        >
-          IF YOU’RE LOOKING FOR SAFE,
-          FOCUS-GROUPED SKATE PRODUCTS,
-          YOU’RE IN THE WRONG PLACE. 
-          THIS SITE CONTAINS ABNORMALLY HIGH 
-          LEVELS OF GREVAIL, MUSTION, AND COURSISTENCE.
-        </motion.p>
-
-        <motion.img
-          src={asterisk}
-          alt=""
-          className="
-            mt-14
-            w-[62px]
-            md:mt-28
-            md:w-[100px]
-          "
-        />
+    <main id="main-content" className="home-page">
+      <picture className="home-hero">
+        <source media="(max-width: 767px)" srcSet={landingPortrait} width={2401} height={3361} />
+        <img src={landingLandscape} alt="A skateboarder on a concrete ramp, photographed in black and white." width={2401} height={1335} fetchPriority="high" decoding="async" />
+      </picture>
+      <section className="home-masthead light-section" aria-labelledby="home-title">
+        <div className="home-masthead__title"><h1 id="home-title">Brknbrds</h1></div>
+        <dl className="home-masthead__metadata">
+          <div><dt className="mono">NOTES</dt><dd><ul><li>8_6</li><li>Unholy alloys</li><li>Dependable hardware</li></ul></dd></div>
+          <div><dt className="mono">STARRING</dt><dd><ul>{starring.map((person) => <li key={person.name}><a href={person.href} target="_blank" rel="noreferrer">{person.name}</a></li>)}</ul></dd></div>
+        </dl>
+        <div className="home-intro"><span className="mono">BRKNBRDS — LAGOS</span><p>If you’re looking for safe, focus-grouped skate products, you’re in the wrong place. This site contains abnormally high levels of grevail, mustion, and coursistence.</p></div>
       </section>
 
-      {/* desktop footer */}
-      <footer
-        className="
-          absolute
-          bottom-16
-          left-1/2
-          z-20
-          hidden
-          -translate-x-1/2
-          items-center
-          gap-9
-          text-[12px]
-          uppercase
-          tracking-[-0.08em]
-          md:flex
-        "
-      >
-        <a
-          href="https://instagram.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="transition-colors duration-200 hover:text-[#C81103]"
-        >
-          POTATO
-        </a>
+      <section className="home-sessions dark-section section-pad" aria-label="Sessions">
+        <SectionLabel title="SESSIONS / FIELD LOG" to="/sessions" linkText="VIEW ALL" />
+        <div className="editorial-row">
+          {sessions.slice(0, 4).map((session) => (
+            <Link className="editorial-card" to={`/sessions#${sessionId(session)}`} key={sessionId(session)}>
+              <SessionImage session={session} />
+              <div className="editorial-card__caption"><h3>{locationTitle(session.location)}</h3><span className="mono">{session.date}</span></div>
+              <div className="editorial-card__metadata mono"><span>{session.city} / {session.time}</span><span>{session.status}</span></div>
+            </Link>
+          ))}
+        </div>
+        <p className="record-note mono">PUBLIC RUNS — DATES AS RECORDED</p>
+      </section>
 
-        <a
-          href="https://instagram.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="transition-colors duration-200 hover:text-[#C81103]"
-        >
-          BANJI
-        </a>
+      <section className="home-product light-section section-pad" aria-labelledby="giran-title">
+        <div className="feature-heading">
+          <Link className="feature-heading__label mono" to="/shop">SHOP →</Link>
+          <div className="feature-heading__title"><p className="mono">SKATEBOARDS, DEPENDABLE HARDWARE</p><h2 id="giran-title">{giran.name}</h2></div>
+        </div>
+        <div className="product-feature">
+          <Link to={productHref(giran)} className="product-feature__image" aria-label={`Explore ${giran.name}`}><ProductImage name={giran.name} assetName={giran.images[0]} /></Link>
+          <div className="product-feature__copy"><p>{giran.description}</p><Link className="button-link" to={productHref(giran)}>VIEW PRODUCT <span className="mono">{giran.price}</span><span aria-hidden="true">↗</span></Link></div>
+        </div>
+      </section>
 
-        <a
-          href="https://instagram.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="transition-colors duration-200 hover:text-[#C81103]"
-        >
-          GREG
-        </a>
+      <section className="home-shop dark-section section-pad" aria-label="Shop selection">
+        <SectionLabel title="SHOP / BRKNBRDS" to="/shop" linkText={`VIEW ALL ${shopItems.length}`} />
+        <div className="editorial-row">{featured.map((item) => <ProductCard item={item} key={item.slug} />)}</div>
+      </section>
 
-        <Link
-          to="/archive"
-          className="transition-colors duration-200 hover:text-[#C81103]"
-        >
-          ARCHIVE
-        </Link>
-
-        <Link
-          to="/dry-stuff"
-          className="text-[#C81103]"
-        >
-          DRY STUFF
-        </Link>
-      </footer>
-
-      {/* mobile footer */}
-      <footer
-        className="
-          absolute
-          bottom-8
-          left-1/2
-          z-20
-          flex
-          -translate-x-1/2
-          flexrow
-          items-center
-          gap-6
-          text-[9px]
-          uppercase
-          tracking-[-0.08em]
-          md:hidden
-        "
-      >
-
-        <a
-          href="https://instagram.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="transition-colors duration-200 hover:text-[#C81103]"
-        >
-          POTATO
-        </a>
-
-        <a
-          href="https://instagram.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="transition-colors duration-200 hover:text-[#C81103]"
-        >
-          BANJI
-        </a>
-
-        <a
-          href="https://instagram.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="transition-colors duration-200 hover:text-[#C81103]"
-        >
-          GREG
-        </a>
-
-        <Link to="/archive">
-          ARCHIVE
-        </Link>
-
-        <Link
-          to="/dry-stuff"
-          className="whitespace-nowrap text-[#C81103]"
-        >
-          DRY STUFF
-        </Link>
-      </footer>
+      <section className="home-promo dark-section" aria-labelledby="promo-title">
+        <div className="home-promo__copy"><p className="mono">BRKNBRDS — SESSIONS</p><h2 id="promo-title">Open sessions.<br />Good terrain.</h2><p className="home-promo__description">Open sessions, film runs, test nights, bad ideas, good terrain.</p><Link className="button-link button-link--solid" to="/sessions">SESSIONS <span aria-hidden="true">→</span></Link></div>
+        <div className="media-space home-promo__image"><img src={footerImage} alt="A group posing together at night." width={1086} height={724} loading="lazy" decoding="async" /></div>
+      </section>
     </main>
   );
 }

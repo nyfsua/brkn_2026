@@ -54,48 +54,11 @@
     },
 
     {
-        "slug": "stand",
-        "name": "Skateboard Stand",
-        "price": "₦5,000",
-        "description": "Display your skateboard in style with our Skateboard Stand. Perfect for showcasing your favorite deck when not in use.",
-
-        "images": [ "skateboard-stand.png", "stand-visualiser.png" ],
-        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
-  
-        "sections": [
-          { "title": "Product Details", "content": "Wizkid." },
-  
-          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
-  
-          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
-  
-        ]
-    },
-
-    {
         "slug": "gxng-deck",
         "name": "Gxng Deck",
         "price": "₦100,000",
         "description": "Community.",
         "images": [ "gxng.png", "gripside.png" ],
-        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
-  
-        "sections": [
-          { "title": "Product Details", "content": "Community." },
-  
-          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
-  
-          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
-  
-        ]
-      },
-
-      {
-        "slug": "kerosene-socks",
-        "name": "Kerosene Socks",
-        "price": "₦10,000",
-        "description": "Community.",
-        "images": [ "kerosene-socks.png", "kerosene-socks.png" ],
         "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
   
         "sections": [
@@ -144,24 +107,6 @@
         ]
     },
 
-    {
-        "slug": "crash poetics",
-        "name": "Crash Poetics Pack",
-        "price": "₦250,000",
-        "description": "000 000 000",
-        "images": [ "crashpoetics-pack.png" ],
-        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
-  
-        "sections": [
-          { "title": "Product Details", "content": "Wizkid." },
-  
-          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
-  
-          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
-  
-        ]
-    },
-
       {
         "slug": "irony-socks",
         "name": "Irony Socks",
@@ -169,24 +114,6 @@
         "description": "Community.",
         "images": [ "irony-white.png", "irony-white.png" ],
         "delivery": { "from": "2025-05-29", "to":   "2025-05-22" },
-  
-        "sections": [
-          { "title": "Product Details", "content": "Community." },
-  
-          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
-  
-          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
-  
-        ]
-      },
-
-      {
-        "slug": "sticker-pack",
-        "name": "Sticker Pack",
-        "price": "₦5,000",
-        "description": "Community.",
-        "images": [ "stickers.png", "stickers-sans.png" ],
-        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
   
         "sections": [
           { "title": "Product Details", "content": "Community." },
@@ -308,24 +235,6 @@
       },
 
       {
-        "slug": "kerosene-shirt",
-        "name": "Kerosene Shirt",
-        "price": "₦20,000",
-        "description": "Polyester Windbreaker. Designed for the West African climate.",
-        "images": [ "kerosene-shirt.png", "KERO-SHIRT-BACK.png" ],
-        "delivery": { "from": "2025-05-19", "to":   "2025-05-22" },
-  
-        "sections": [
-          { "title": "Product Details", "content": "Community." },
-  
-          { "title": "Shipping & Returns", "content": "We ship to all states in Nigeria. We offer 7 days return policy." },
-  
-          { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
-  
-        ]
-      },
-
-      {
         "slug": "maelstrom-deck",
         "name": "Maelstrom Deck",
         "price": "₦100,000",
@@ -396,9 +305,83 @@
           { "title": "Warranty", "content": "We offer no warranty on Skateboards." }
   
         ]
+    },
+    {
+      "slug": "carabiner",
+      "name": "Carabiner",
+      "price": "PRICE TBC",
+      "description": "Product details to be confirmed.",
+      "images": ["Frame 2252.png"],
+      "delivery": null,
+      "sections": [
+        { "title": "Product Details", "content": "Specifications to be confirmed." },
+        { "title": "Shipping & Returns", "content": "To be confirmed." },
+        { "title": "Warranty", "content": "To be confirmed." }
+      ]
+    },
+    {
+      "slug": "travel-cup",
+      "name": "Travel Cup",
+      "price": "PRICE TBC",
+      "description": "Product details to be confirmed.",
+      "images": ["Frame 2255.png"],
+      "delivery": null,
+      "sections": [
+        { "title": "Product Details", "content": "Specifications to be confirmed." },
+        { "title": "Shipping & Returns", "content": "To be confirmed." },
+        { "title": "Warranty", "content": "To be confirmed." }
+      ]
+    },
+    {
+      "slug": "key-strap",
+      "name": "Key Strap",
+      "price": "PRICE TBC",
+      "description": "Product details to be confirmed.",
+      "images": ["Frame 2257.png"],
+      "delivery": null,
+      "sections": [
+        { "title": "Product Details", "content": "Specifications to be confirmed." },
+        { "title": "Shipping & Returns", "content": "To be confirmed." },
+        { "title": "Warranty", "content": "To be confirmed." }
+      ]
+    },
+    {
+      "slug": "free-poster",
+      "name": "FREE Poster",
+      "price": "PRICE TBC",
+      "description": "Product details to be confirmed.",
+      "images": ["Frame 2259.png"],
+      "delivery": null,
+      "sections": [
+        { "title": "Product Details", "content": "Specifications to be confirmed." },
+        { "title": "Shipping & Returns", "content": "To be confirmed." },
+        { "title": "Warranty", "content": "To be confirmed." }
+      ]
+    },
+    {
+      "slug": "incense",
+      "name": "Incense",
+      "price": "PRICE TBC",
+      "description": "Product details to be confirmed.",
+      "images": ["iPhone 16 - 17.png"],
+      "delivery": null,
+      "sections": [
+        { "title": "Product Details", "content": "Specifications to be confirmed." },
+        { "title": "Shipping & Returns", "content": "To be confirmed." },
+        { "title": "Warranty", "content": "To be confirmed." }
+      ]
+    },
+    {
+      "slug": "w01-jacket",
+      "name": "W01 Jacket",
+      "price": "PRICE TBC",
+      "description": "Product details to be confirmed.",
+      "images": ["W01_front.png", "W01_back.png"],
+      "delivery": null,
+      "sections": [
+        { "title": "Product Details", "content": "Specifications to be confirmed." },
+        { "title": "Shipping & Returns", "content": "To be confirmed." },
+        { "title": "Warranty", "content": "To be confirmed." }
+      ]
     }
-    
-    
-
   ]
-  
