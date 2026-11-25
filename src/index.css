@@ -56,6 +56,28 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .dark-section { color: var(--paper); background: var(--ink); --rule: #414141; }
 .section-pad { padding-inline: var(--edge-gap); }
 
+/* Nigerian Dynamics cursor, shared across every route. */
+.custom-cursor { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  html.has-custom-cursor, html.has-custom-cursor * { cursor: none !important; }
+  .custom-cursor {
+    display: block;
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    background: url("./assets/svg/nd-cursor.svg") center / contain no-repeat;
+    mix-blend-mode: difference;
+    transform: translate3d(-100px, -100px, 0);
+    will-change: transform;
+  }
+  .custom-cursor[data-visible="true"] { opacity: 1; }
+}
+
 /* Shared navigation uses the existing Tiffinagh logo. */
 .site-header { position: relative; z-index: 30; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 82px; padding: 24px var(--edge-gap); color: var(--ink); background: var(--paper); border-bottom: 1px solid var(--rule); }
 .site-header--overlay { position: absolute; top: 6px; left: 6px; right: 6px; color: var(--paper); background: transparent; border: 0; }

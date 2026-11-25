@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link, Routes, Route, useLocation } from "react-router-dom";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
+import CustomCursor from "./components/CustomCursor";
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
 import SessionsPage from "./pages/SessionsPage";
@@ -26,7 +27,7 @@ function PageMetadata() {
 }
 
 export default function App() {
-  return <><PageMetadata /><SiteHeader /><Routes>
+  return <><PageMetadata /><CustomCursor /><SiteHeader /><Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/shop" element={<ShopPage />} />
     <Route path="/shop/:slug" element={<ProductPage />} />

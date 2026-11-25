@@ -11,7 +11,6 @@ const starring = [
   { name: "Potato", href: "https://www.instagram.com/ceonpotato/" },
   { name: "Greg", href: "https://www.instagram.com/otahix_/" },
   { name: "Banji", href: "https://www.instagram.com/brknbrds_/" },
-  { name: "Ziri", href: "https://www.instagram.com/alienboyziri/" },
   { name: "Oseni", href: "https://www.instagram.com/tunde_oseniii/" },
   { name: "Gbemi", href: "https://www.instagram.com/mi.cocobaby/" },
   { name: "Lanre", href: "https://www.instagram.com/unussual_lanre/" },
